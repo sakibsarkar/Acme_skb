@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .my_container {
+    @apply max-w-[1440px] mx-auto;
+  }
+
+  .center {
+    @apply flex items-center justify-center;
+  }
+}
+
+@font-face {
+  font-family: fontPrimary;
+  src: url("/Geist-Regular-BF6569491e3eff1.otf") format("opentype");
+}
+
+body {
+  font-family: fontPrimary, sans-serif;
+}
