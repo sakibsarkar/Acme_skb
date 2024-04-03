@@ -7,6 +7,9 @@ export default {
         primary_dark: "#171717",
         primary_darker: "#09090B",
         nav_link: "#09090b99",
+
+        // border color
+        primaryBorder: "#EBEBEB",
       },
     },
   },

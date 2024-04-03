@@ -3,7 +3,7 @@ import Logo from "../utils/Logo";
 
 const Header = () => {
   return (
-    <header>
+    <header className="bg-white">
       <div className="flex w-full flex-col ">
         <div className="bg-primary_darker h-[40px] center text-white gap-[120px]">
           <p className="text-[14px] font-[400]">Restocked Today</p>
