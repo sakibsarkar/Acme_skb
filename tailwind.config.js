@@ -7,6 +7,7 @@ export default {
         primary_dark: "#171717",
         primary_darker: "#09090B",
         nav_link: "#09090b99",
+        lightDark: "#4B5563",
 
         // border color
         primaryBorder: "#EBEBEB",

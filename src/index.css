@@ -20,3 +20,12 @@
 body {
   font-family: fontPrimary, sans-serif;
 }
+
+.selectedBg {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 112, 243, 0.03) 0%,
+      rgba(0, 112, 243, 0.03) 100%
+    ),
+    #fff;
+}
