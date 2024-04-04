@@ -13,7 +13,7 @@ function App() {
         <Header />
         <GotoPlans />
 
-        <main className="max-w-[1078px] mx-auto">
+        <main className="max-w-[1079px] mx-auto">
           <div className="border-[1px] border-primaryBorder w-full">
             <HeroSection />
             <OurService />

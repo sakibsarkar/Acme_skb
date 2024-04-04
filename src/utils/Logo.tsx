@@ -7,7 +7,7 @@ const Logo = () => {
   };
 
   return (
-    <div className="flex gap-[12px] items-center justify-start">
+    <div className="flex gap-[12px] items-start justify-start">
       <div
         className="w-[32px] h-[32px] rounded-[9px] center bg-primary_dark"
         style={shadow}

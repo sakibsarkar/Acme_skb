@@ -8,8 +8,8 @@ const OurService = () => {
   };
 
   return (
-    <section className="flex p-12 justify-center items-center gap-[16px]">
-      <h1 className="text-[24px] font-semibold">Our Services:</h1>
+    <section className="flex p-[48px] justify-center items-center gap-[24px]">
+      <h1 className="text-[24px] font-[600]">Our Servers:</h1>
 
       <div className="center gap-[16px]">
         {services.map(({ title, id, Icon }, i) => (
@@ -19,7 +19,7 @@ const OurService = () => {
             className="border rounded-full py-[10px] pl-[10px] pr-[16px] min-h-[32px] flex items-center justify-center text-[14px] font-[500] gap-[6px] bg-white text-primary_dark"
           >
             <Icon />
-            Services
+            {title}
           </button>
         ))}
       </div>
