@@ -8,10 +8,10 @@ const OurService = () => {
   };
 
   return (
-    <section className="flex p-[48px] justify-center items-center gap-[24px]">
+    <section className="flex px-[10px] sm:px-[25px] py-[48px] lg:p-[48px] justify-center items-center gap-[24px] lg:flex-row flex-col">
       <h1 className="text-[24px] font-[600]">Our Servers:</h1>
 
-      <div className="center gap-[16px]">
+      <div className="center gap-[16px] flex-wrap">
         {services.map(({ title, id, Icon }, i) => (
           <button
             key={id}

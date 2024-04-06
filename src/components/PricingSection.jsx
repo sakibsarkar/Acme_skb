@@ -21,9 +21,9 @@ const PricingSection = () => {
       <h1 className="text-[32px] font-bold text-primary_dark mb-3">
         Our Pricing
       </h1>
-      <div className="flex gap-5">
+      <div className="flex gap-5 lg:flex-row flex-col">
         <div className="flex-1 flex flex-col gap-[10px]">
-          <div className="flex items-center gap-6 mb-[38px]">
+          <div className="flex items-center gap-6 mb-[38px] flex-wrap">
             <button className="w-[270px] min-h-[40px] rounded-[6px] px-[16px] py-[8px]  bg-primary_dark text-white text-[14px]">
               Get 2 months free (switch to yearly)
             </button>
@@ -33,41 +33,80 @@ const PricingSection = () => {
             </div>
           </div>
 
-          {pricing.map((price) => (
-            <div
-              className={`max-w-[624px] shadow-lg group cursor-pointer ${
-                price.id === selected ? "selectedBg" : "bg-white"
-              } rounded-[12px] pl-[40px] pr-[18px] py-[8px] flex justify-between items-center border border-gray-200 hover:border-cardBlue`}
-              onClick={() => setSelected(price.id)}
-              key={price.id}
-            >
-              <p className="">
-                <span className="text-[32px] font-[600] text-primaryColor">
-                  ${price.price}
-                </span>
-                <span className="text-[#666] text-[16px]">/mo</span>
-              </p>
-              <ul className="flex gap-3">
-                {price.service.map((ser, i) => (
-                  <li
-                    className={`${
-                      i !== 0 ? "border-l-[1px] px-[8px] " : "pr-[8px]"
-                    } border-primary_dark text-[14px]`}
-                    key={i + "blah"}
-                  >
-                    {ser}
-                  </li>
-                ))}
-              </ul>
-              {selected === price.id ? (
-                <BlueOkIcon />
-              ) : (
-                <div className="h-[17px] w-[17px] rounded-full border-[2px] border-[#374151] group-hover:bg-[#0070F3]"></div>
-              )}
-            </div>
-          ))}
+          <div className="flex-col gap-[10px] w-full md:flex hidden">
+            {pricing.map((price) => (
+              <div
+                className={`lg:max-w-[624px] shadow-lg group cursor-pointer ${
+                  price.id === selected ? "selectedBg" : "bg-white"
+                } rounded-[12px] pl-[40px] pr-[18px] py-[8px] flex justify-between items-center border border-gray-200 hover:border-cardBlue`}
+                onClick={() => setSelected(price.id)}
+                key={price.id}
+              >
+                <p className="">
+                  <span className="text-[32px] font-[600] text-primaryColor">
+                    ${price.price}
+                  </span>
+                  <span className="text-[#666] text-[16px]">/mo</span>
+                </p>
+                <ul className="flex gap-3">
+                  {price.service.map((ser, i) => (
+                    <li
+                      className={`${
+                        i !== 0 ? "border-l-[1px] px-[8px] " : "pr-[8px]"
+                      } border-primary_dark text-[14px]`}
+                      key={i + "blah"}
+                    >
+                      {ser}
+                    </li>
+                  ))}
+                </ul>
+                {selected === price.id ? (
+                  <BlueOkIcon />
+                ) : (
+                  <div className="h-[17px] w-[17px] rounded-full border-[2px] border-[#374151] group-hover:bg-[#0070F3]"></div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="flex w-full md:hidden gap-[10px] flex-col">
+            {pricing.map((price, i) => (
+              <div
+                key={i + "sf"}
+                onClick={() => setSelected(price.id)}
+                className={`relative lg:max-w-[624px] shadow-lg group cursor-pointer ${
+                  price.id === selected ? "selectedBg" : "bg-white"
+                } rounded-[12px] pl-[40px] pr-[18px] py-[8px] flex justify-start flex-col items-start border border-gray-200 hover:border-cardBlue gap-[15px]`}
+              >
+                <h1>
+                  <span className="text-[32px] font-[600] text-primaryColor">
+                    ${price.price}
+                  </span>
+                  <span className="text-[#666] text-[16px]">/mo</span>
+                </h1>
+                <ol className="flex gap-[5px] list-disc flex-col">
+                  {price.service.map((ser, i) => (
+                    <li
+                      className={` border-primary_dark text-[14px]`}
+                      key={i + "ff"}
+                    >
+                      {ser}
+                    </li>
+                  ))}
+                </ol>
+
+                <div className="absolute top-[10px] right-[15px]">
+                  {selected === price.id ? (
+                    <BlueOkIcon />
+                  ) : (
+                    <div className="h-[17px] w-[17px] rounded-full border-[2px] border-[#374151] group-hover:bg-[#0070F3]"></div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="flex flex-col gap-[6px] lg:min-w-[356px] h-[385px] bg-white rounded-[12px] border p-[32px] shadow-lg">
+        <div className="flex flex-col gap-[6px] lg:min-w-[356px] min-h-[385px] sm:h-[385px] bg-white rounded-[12px] border p-[32px] shadow-lg">
           <div className="flex flex-col gap-[34.5px] ">
             <div className=" relative top-[-11px]">
               <Logo />

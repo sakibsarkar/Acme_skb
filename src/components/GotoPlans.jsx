@@ -7,7 +7,7 @@ const GotoPlans = () => {
       "0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px 0px rgba(0, 0, 0, 0.04)",
   };
   return (
-    <section className="flex justify-center items-center gap-3 py-[3px] w-full mt-[12px]">
+    <section className="flex flex-wrap justify-center items-center gap-3 py-[3px] w-full mt-[12px]">
       <button className="bg-[#d4f7f0] text-[12px] font-[500] py-[5px] px-[10px] rounded-full text-[#067a6e] center">
         <img src="/party.png" />
         New

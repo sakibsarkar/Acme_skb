@@ -1,6 +1,6 @@
 import React from "react";
 import ArrowDown from "../icons/ArrowDown";
-
+import { HiOutlineMenu } from "react-icons/hi";
 const NavLinks = () => {
   return (
     <nav>
